@@ -1,0 +1,372 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.ms-welcome__main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 16px;
+}
+
+.cvss-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.metric-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-section h3 {
+  margin: 0;
+}
+
+.metric-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.button-metrics {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metric-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.metric-tab {
+  border: 1px solid #c8c6c4;
+  border-radius: 999px;
+  padding: 6px 16px;
+  background: #f3f2f1;
+  color: #201f1e;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.metric-tab:hover,
+.metric-tab:focus {
+  background: #e1dfdd;
+  border-color: #a19f9d;
+  outline: none;
+}
+
+.metric-tab.is-active {
+  background: #0078d4;
+  border-color: #005a9e;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.metric-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metric-group {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-group.is-active {
+  display: flex;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 4px;
+  color: #323130;
+}
+
+fieldset {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #e1dfdd;
+  border-radius: 6px;
+  background-color: #faf9f8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.radio-option:hover {
+  background-color: #edebe9;
+}
+
+.radio-option input[type="radio"] {
+  margin-top: 4px;
+}
+
+.option-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: #201f1e;
+}
+
+.option-hint {
+  display: block;
+  font-size: 12px;
+  color: #605e5c;
+}
+
+.copy-button {
+  margin-left: auto;
+  padding: 2px 10px;
+  border: 1px solid #c8c6c4;
+  border-radius: 4px;
+  background: #f3f2f1;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+  background: #e1dfdd;
+  border-color: #a19f9d;
+  outline: none;
+}
+
+.copy-button.copy-success {
+  background: #c7e0f4;
+  border-color: #005a9e;
+  color: #004578;
+}
+
+.option-toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.option-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #c8c6c4;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 13px;
+}
+
+.option-toggle.is-condensed {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 40px;
+  width: auto;
+  min-width: 32px;
+  align-self: flex-start;
+  padding: 6px 8px;
+}
+
+.option-toggle.is-condensed .option-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.option-toggle.is-condensed .option-hint {
+  display: none;
+}
+
+.option-toggle:hover,
+.option-toggle:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+  outline: none;
+}
+
+.option-toggle.is-selected {
+  border-color: #0078d4;
+  background: #eff6fc;
+}
+
+select {
+  padding: 6px 8px;
+  border: 1px solid #c8c6c4;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: #fff;
+}
+
+select:focus {
+  outline: 2px solid #0078d4;
+  border-color: #0078d4;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ms-Button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: #e1dfdd;
+  cursor: pointer;
+}
+
+.ms-Button .ms-Button-label {
+  color: #323130;
+}
+
+.ms-Button--hero {
+  background: #0078d4;
+}
+
+.ms-Button--hero .ms-Button-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ms-Button:hover,
+.ms-Button:focus {
+  background: #c8c6c4;
+}
+
+.ms-Button--hero:hover,
+.ms-Button--hero:focus {
+  background: #005a9e;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.results h3 {
+  margin: 0;
+}
+
+.result-line {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.score-line {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.score-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex: 1 1 200px;
+}
+
+.score-value {
+  font-weight: 600;
+}
+
+.severity-value {
+  font-style: italic;
+  color: #605e5c;
+}
+
+code {
+  background: #f3f2f1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #c8c6c4;
+  border-radius: 4px;
+  padding: 8px;
+  font-family: "Courier New", Courier, monospace;
+  resize: vertical;
+  min-height: 140px;
+}
+
+.error-message {
+  color: #a80000;
+  min-height: 18px;
+  margin: 4px 0 0;
+}
