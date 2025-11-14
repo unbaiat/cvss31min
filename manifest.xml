@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
-  <Id>8e1ff7b9-af5a-484a-b5b4-412321b959b5</Id>
-  <Version>1.3.3.7</Version>
+  <Id>aa606b5c-d062-488d-a428-d15e99e5b535</Id>
+  <Version>1.3.3.8</Version>
   <ProviderName>CybrOps</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="CVSS 3.1 Calculator minmal"/>
@@ -10,7 +10,7 @@
   <HighResolutionIconUrl DefaultValue="https://unbaiat.github.io/cvss31minassets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.cybrops.io/"/>
   <AppDomains>
-    <AppDomain>https://www.cybrops.op</AppDomain>
+    <AppDomain>https://www.cybrops.io</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
